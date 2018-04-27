@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Website Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans|Russo+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <style>
+ body{
+    background-color: #1B2631;
+    color: #FFF;
+    font-family:'Russo One', sans-serif;
+  }
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #1B2631;
+    color: #FFF;
+    padding: 2.3% 0;
+    font-size: 1.2em;
+    border: 0;
+    min-height:34px;
+  }
+
+   .gradient {
+  background: -webkit-linear-gradient(#FFF, #828384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+  .gradient:hover {
+  background: -webkit-linear-gradient(#d4d0d0, #828384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+  .gradient2 {
+  background: -webkit-linear-gradient(#0ff3fe, #ced2cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+  .navbar-brand{
+    float: left;
+    min-height: 55px;
+    padding: 0 15px 5px;
+  }
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+    color:#FFF;
+    background-color: rgba(255,255,255,0);
+  }
+  .navbar-inverse .navbar-nav li a{
+    color: #D5D5D5;
+     list-style-type: none;
+  }
+
+  li{
+    display:inline;
+  }
+
+.comp-li {
+  padding:1%;
+  color:#000;
+}
+
+a{
+  color:#a0a6ad;
+}
+
+  .mission-list {
+    padding:1%;
+    margin-top: 2%;
+  }
+
+
+.contest-holder{
+  height: 12em;
+  border-top: 20px;
+  border-top: solid 1px #d9e3dc;
+  }
+
+
+  .carousel-caption {
+    top:34%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    text-align: left;
+    left:8%;
+  }
+
+  .carousel-inner {
+    height:41em;
+  }
+
+  h1{
+  font-size: 400%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+
+ }
+ h2{
+  text-align: left;
+  padding-top: 5px;
+ }
+ h4{
+  text-align: left;
+  list-style-type: none;
+ }
+
+ #main-img {
+  filter: brightness(75%);
+ }
+
+ .buttonHolder {
+  text-align:left;
+ }
+
+ .btn:hover {
+font-size:; 18px;
+    color: #FFF;
+    padding: 8px 22px;
+    background: #808080;
+    border: 2px solid #FFF;
+ }
+  .btn {
+    font-size:; 18px;
+    color: #FFF;
+    padding: 8px 22px;
+    background: #000;
+    border: 2px solid #FFF;
+  }
+  .container{
+    margin: 4% auto;
+    width: 100%;
+  }
+
+  .li{
+    height: 20em;
+  }
+  #icon {
+    max-width: 200px;
+    margin: 1% auto;
+  }
+
+.panel-body {
+  background:#1B2631;
+}
+
+.panel-default>.panel-heading {
+  background:#1B2631;
+}
+
+.panel-default {
+  background:#1B2631;
+}
+  _____________
+
+  @media (max-width: 700px) {
+     h1{
+  font-size: 173%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+
+ }
+    .carousel-inner{
+      height:18em;
+    }
+      h4{
+    font-size: .9em;
+  }
+  }
+
+  h2{
+    margin-top: 3px;
+  }
+ 
+
+    }
+
+    
+  #icon {
+    max-width: 150px;
+  }
+
+
+
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+					<span class="icon-bar"> </span>
+				</button>
+				 <a class="navbar-brand" href= {% url 'mission:homes' %}><h2 class="gradient2"> Rift Missions</h2> </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href={% url 'mission:homes' %} class="gradient">Home Page</a></li>
+          <li><a href={% url 'mission:missions' %} class="gradient">Missions</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+  <div class="contest-holder">
+    <div class="contest-title">
+    </div>
+    <h2 class="gradient"> Missions </h2>
+    <div class="contest-body">
+    <h4> Tahm kench max kills challenge. See who can earn the most kills on Tahm Kench in a regular or ranked Game. Use any lane or build you see fit!  </h4>
+    </div>
+    <div class="mission-list">
+     <h4>
+      <li class="comp-li"><a href={% url 'mission:home' %} class="gradient">Enter</a></li>
+      <li class="comp-li"><a href={% url 'mission:highscores' %} class="gradient">Leaderboards</a></li>
+      </h4>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Website Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans|Russo+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <style>
+  body{
+    background-color: #1B2631;
+    color: #FFF;
+    font-family:'Russo One', sans-serif;
+  }
+
+    .info_container {
+        width:1000px;
+        margin: auto;
+    }
+    .title {
+        margin-top: 34px;
+        margin-bottom: 34px;
+        color: #f7f7f7;
+        font-size: 2.2rem;
+    }
+
+    .kills_title{
+        margin-top: 34px;
+        margin-bottom: 34px;
+        color: #f7f7f7;
+        font-size: 2.2rem;
+    }
+
+   .value_class {
+       height: 45px;
+       color: #f7f7f7;
+       overflow: hidden;
+   }
+
+   .info {
+       width: 1000px;
+       margin-left: 13%;
+   }
+  img {
+      height: 48px;
+      width: 48px;
+      margin-top: 30px;
+  }
+  .names_column {
+      display: block;
+      width: 15%;
+      float:left;
+      padding: 0px;
+      border: none;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+      font-size: 1.6rem;
+      text-align: center;
+      text-decoration: none;
+      background: none;
+      color: #000;
+    }
+
+  .item_column {
+
+  display: block;
+  width: 6.5%;
+  float:left;
+  padding: 5px;
+  border: none;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  color: #000;
+  margin-top: 50px;
+    }
+
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #1B2631;
+    color: #FFF;
+    padding: 2.3% 0;
+    font-size: 1.2em;
+    border: 0;
+  }
+  .navbar-brand{
+    float: left;
+    min-height: 55px;
+    padding: 0 15px 5px;
+  }
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+    color:#FFF;
+    background-color: #1B2631;
+  }
+  .navbar-inverse .navbar-nav li a{
+    color: #D5D5D5;
+  }
+
+  .gradient {
+  background: -webkit-linear-gradient(#FFF, #828384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+  .gradient:hover {
+  background: -webkit-linear-gradient(#d4d0d0, #828384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+  .gradient2 {
+  background: -webkit-linear-gradient(#0ff3fe, #ced2cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  vertical-align: middle;
+
+}
+
+tr {
+  height: 6.5em;
+}
+
+.form-group{
+  margin-bottom: 0px;
+  margin-top: 24px;
+}
+.form-control {
+  background-color: #7973733b;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 0px;
+  }
+  .carousel-caption {
+    top:34%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    text-align: left;
+    left:8%;
+  }
+
+  .carousel-inner {
+    height:41em;
+  }
+
+  h1{
+  font-size: 400%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+
+ }
+ h2{
+  text-align: left;
+ }
+ h4{
+  text-align: left;
+ }
+
+ #main-img {
+  filter: brightness(75%);
+ }
+
+ .buttonHolder {
+  text-align:left;
+ }
+
+ .btn:hover {
+font-size:; 18px;
+    color: #FFF;
+    padding: 8px 22px;
+    background: #808080;
+    border: 2px solid #FFF;
+ }
+  .btn {
+    font-size:; 18px;
+    color: #FFF;
+    padding: 8px 22px;
+    background: #000;
+    border: 2px solid #FFF;
+  }
+  .container{
+    margin: 4% auto;
+
+  }
+  #icon {
+    max-width: 200px;
+    margin: 1% auto;
+  }
+
+  @media (max-width: 700px) {
+     h1{
+  font-size: 173%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+
+ }
+    .carousel-inner{
+      height:18em;
+    }
+      h4{
+    font-size: .9em;
+  }
+  }
+
+  h2{
+    margin-top: 3px;
+  }
+
+
+    }
+
+
+  #icon {
+    max-width: 150px;
+  }
+
+@media (max-width: 500px){
+  tr {
+  height: 3.5em;
+}
+
+    .info_container {
+    width: 320px;
+    margin: auto;
+}
+   .info {
+    width: 320px;
+    margin-left: 0%;
+}
+.names_column {
+    display: block;
+    width: 10%;
+    float: left;
+    padding: 0px;
+    border: none;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: #000;
+    margin-left: 10px;
+    margin-top: 39px;
+}
+.title {
+    display: none;
+}
+
+.kills_title{
+    display:none;
+}
+
+.value_class {
+    height: 48px;
+    color: #f7f7f7;
+    width: 49px;
+    overflow: scroll;
+}
+
+img {
+    height: 29px;
+    width: 29px;
+    margin-top: 26.5px;
+}
+
+.item_column {
+    display: block;
+    width: 6.5%;
+    float: left;
+    padding: 5px;
+    border: none;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    color: #000;
+    margin-top: 0px;
+    margin: 0px;
+    margin-left: 11px;
+}
+}
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+        </button>
+         <a class="navbar-brand" href= {% url 'mission:homes' %}><h2 class="gradient2"> Rift Missions</h2> </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href={% url 'mission:homes' %} class="gradient">Home Page</a></li>
+          <li><a href={% url 'mission:missions' %} class="gradient">Missions</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="info_container">
+
+    <div class="info">
+
+    <div class="names_column">
+    <p class="title"> Leaders </p>
+    {% for instance in names %}
+        {% for field, value in instance.fields.items %}
+            <p class="value_class">{{ value }}</p> <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+
+    <div class="names_column">
+    <p class="kills_title"> Kills </p>
+    {% for instance in kills %}
+        {% for field, value in instance.fields.items %}
+            <p class="value_class">{{ value }}</p> <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+    <div class="item_column">
+    {% for instance in item0 %}
+        {% for field, value in instance.fields.items %}
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+    <div class="item_column">
+    {% for instance in item1 %}
+        {% for field, value in instance.fields.items %}
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+    <div class="item_column">
+    {% for instance in item2 %}
+        {% for field, value in instance.fields.items %}
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+
+    <div class="item_column">
+    {% for instance in item3 %}
+        {% for field, value in instance.fields.items %}
+              <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+    <div class="item_column">
+    {% for instance in item4 %}
+        {% for field, value in instance.fields.items %}
+             <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+    <div class="item_column">
+    {% for instance in item5 %}
+        {% for field, value in instance.fields.items %}
+             <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+    </div>
+
+    <div class="item_column">
+    {% for instance in item6 %}
+        {% for field, value in instance.fields.items %}
+             <img src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{ value }}.png">  <br>
+        {% endfor %}
+    {%  endfor %}
+
+    </div>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

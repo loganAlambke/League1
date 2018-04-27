@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rift Missions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans|Russo+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+  body{
+    background-color: #1B2631;
+    color: #FFF;
+    font-family:'Russo One', sans-serif;
+  }
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #1B2631;
+    color: #FFF;
+    padding: 2.3% 0;
+    font-size: 1.2em;
+    border: 0;
+    min-height:34px;
+  }
+  .navbar-brand{
+    float: left;
+    min-height: 55px;
+    padding: 0 15px 5px;
+  }
+  .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+    color:#FFF;
+    background-color: rgba(255,255,255,0);
+  }
+  .navbar-inverse .navbar-nav li a{
+    color: #D5D5D5;
+  }
+
+  .navbar-inverse{
+  background:-webkit-linear-gradient(right, #0f1322, #3b7889);
+  }
+
+
+  .carousel-caption {
+    top:34%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    text-align: left;
+    left:8%;
+    width:60%;
+  }
+
+  .carousel-inner {
+    height:58em;
+  }
+  .h1, .h2, .h3, h1, h2, h3 {
+    margin-top:15px;
+  }
+
+  h1{
+  font-size: 435%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+  text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.4);
+  margin-top: 10px;
+ }
+ h2{
+  text-align: left;
+  color: #FFF;
+ }
+ h4{
+  text-align: left;
+ }
+
+ .gradient {
+  background: -webkit-linear-gradient(#FFF, #828384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+  .gradient2 {
+  background: -webkit-linear-gradient(#0ff3fe, #ced2cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+ #main-img {
+  filter: brightness(75%);
+ }
+
+ .buttonHolder {
+  text-align:left;
+ }
+
+ .btn:hover {
+  
+  background: linear-gradient(45deg, #66cbe1,   #36b89b);
+  
+ }
+  .btn {
+  z-index: 99;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #66cbe1, #8093F1);
+  border-radius: 3px;
+  color: #FFF;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+
+  margin-bottom: 20px;
+
+  }
+  .container{
+    margin: 4% auto;
+  }
+
+  .space {
+
+  height: .5em;
+  }
+  #icon {
+    max-width: 200px;
+    margin: 1% auto;
+  }
+@media (max-width: 900px) {
+  h1{
+  font-size: 310%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+}
+
+.carousel-inner{
+      height:30em;
+    }
+
+  }
+
+  @media (max-width: 700px) {
+     h1{
+  font-size: 173%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+
+ }
+    .carousel-inner{
+      height:30em;
+    }
+      h4{
+    font-size: .9em;
+  }
+
+  .form-group {
+    margin-bottom: 0px;
+}
+  
+   .btn{
+    z-index: 87;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94px;
+    height: 27px;
+    background: linear-gradient(45deg, #66cbe1, #8093F1);
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+  h2{
+    margin-top: 3px;
+  }
+ 
+
+    }
+
+    
+  #icon {
+    max-width: 150px;
+  }
+
+
+@media (max-width: 400px) {
+  h1{
+  font-size: 120%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+}
+
+h2 {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+  padding-top: 10px;
+
+
+}
+
+@media (max-width: 290px) {
+  h1{
+  font-size: 100%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+}
+  h2{
+    margin-top: 25px;
+  }
+
+.carousel-inner{
+      height:20em;
+    }
+
+ .carousel-caption {
+  bottom: -20px;
+ }
+
+
+  }
+
+@media (max-width: 260px) {
+  h1{
+  font-size: 90%;
+  font-weight: 900;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: .3px;
+}
+  h2{
+    margin-top: 25px;
+  }
+
+.carousel-inner{
+      height:20em;
+    }
+
+ .carousel-caption {
+  bottom: -20px;
+ }
+
+ .btn{
+    z-index: 87;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 27px;
+    background: linear-gradient(45deg, #66cbe1, #8093F1);
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+
+  }
+
+
+
+
+
+  </style>
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+        </button>
+         <a class="navbar-brand" href= {% url 'mission:homes' %}><h2 class="gradient2"> Rift Missions</h2> </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href={% url 'mission:homes' %} class="gradient">Home Page</a></li>
+          <li><a href={% url 'mission:missions' %} class="gradient">Missions</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	
+
+
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+			{% load static %}
+			<img src="{% static "mission/monestary.jpg" %}" id="main-img">
+			<div class="carousel-caption">
+				<h1 class="gradient"> 
+        Sorry we are taking too many requests right now. Please try again in a minute or so <br>
+        </h1>   
+		</div>
+	</div>
+	</div>
+			<!---end top image-->
+
+
+
+
+
+
+
+
+</body>
+</html>
+
