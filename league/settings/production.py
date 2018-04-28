@@ -20,13 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'rpi^(^lgvwl&%13-v=h00$pz8q50)5zfek+f-p1qk*_8bqg#t!'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = [ '127.0.0.1']
+ALLOWED_HOSTS = ['leaguetest22.herokuapp.com', 'yourdomain.com']
 
 
 # Application definition
@@ -82,17 +82,21 @@ WSGI_APPLICATION = 'league.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rift' ,
-        'USER' : 'postgres',
-        'PASSWORD' : 'battery1',
-        'HOST' : '',
-        'PORT' : '',
-
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'rift' ,
+    #     'USER' : 'postgres',
+    #     'PASSWORD' : 'battery1',
+    #     'HOST' : '',
+    #     'PORT' : '',
+    #
+    # }
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+#DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -132,6 +136,16 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+
+CORS_REPLACE_HTTPS_REFERER      = True
+HOST_SCHEME                     = "https://"
+SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT             = True
+SESSION_COOKIE_SECURE           = True
+CSRF_COOKIE_SECURE              = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
+SECURE_HSTS_SECONDS             = 1000000
+SECURE_FRAME_DENY               = True
 
 
 SESSION_ENGINE= "django.contrib.sessions.backends.cache"

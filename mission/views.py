@@ -29,7 +29,7 @@ from django.utils import timezone
 
 #find the 403 error from ratelimiting again. then fine where it breaks and add if statement to put template there
 
-api-key = api-key
+apikey = os.environ.get('apikey')
 
 #@ratelimit(key="ip", rate="10/h", method=ratelimit.UNSAFE)
 class Homeview(RatelimitMixin, View):
@@ -58,7 +58,7 @@ class Homeview(RatelimitMixin, View):
             #text = form.cleaned_data['username']
             username = str(form.cleaned_data['username'])
             region = form.cleaned_data['region']
-            api_key = "api-key"
+            api_key = apikey
             item_dict = {}
             all_kills = []
             # Get summoner id using player's name
@@ -231,7 +231,7 @@ class Homeview(RatelimitMixin, View):
 #     region = Input.objects.all().values_list('region', flat=True)
 #     summoner_id = Input.objects.all().values_list('summoner_id', flat=True)
 #     account_id = Input.objects.all().values_list('account_id', flat=True)
-#     api_key = "RGAPI-7a90b1db-b9c6-4a86-84f2-51c10b2348c9"
+#     api_key = apikey
 #
 #
 #     for summ, acc, region in zip(summoner_id, account_id, region):
@@ -319,7 +319,7 @@ class Homeview(RatelimitMixin, View):
 #     summoners = summoners
 #
 #     def update(x):
-#         api_key = "api-key"
+#         api_key = apikey
 #         account_id =  x[0]
 #         summoner_id = x[1]
 #         region = x[2]

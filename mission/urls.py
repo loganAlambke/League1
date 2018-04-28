@@ -31,7 +31,6 @@ urlpatterns = [
 
     path('', Homeview.as_view(), name='home'),
     path('highscores/', views.highscores, name='highscores'),
-    path('test/', views.db_update, name='main'),
     path('mission/', views.missions, name='missions'),
     path('home/', views.home, name='homes'),
     #path('job', views.job, name='job'),
