@@ -1,3 +1,3 @@
-from .production import *
+from league/settings/production.py import *
 
 
