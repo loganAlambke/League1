@@ -82,15 +82,15 @@ WSGI_APPLICATION = 'league.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'rift' ,
-    #     'USER' : 'postgres',
-    #     'PASSWORD' : 'battery1',
-    #     'HOST' : '',
-    #     'PORT' : '',
-    #
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd7ur51gud392rj' ,
+        'USER' : 'jkmohfinqavvgr',
+        'PASSWORD' : '487b6c75201e640f89840f6e5e6275d1fe549a7a5df015a5c919bab2fa9dc2f4',
+        'HOST' : 'ec2-54-83-204-6.compute-1.amazonaws.com',
+        'PORT' : '5432',
+
+    }
 }
 
 import dj_database_url

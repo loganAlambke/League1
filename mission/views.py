@@ -145,7 +145,7 @@ class Homeview(RatelimitMixin, View):
                 item6 = str(items[6])
 
                 try:
-                    conn = psycopg2.connect(dbname='rift', user='postgres', host='localhost', password='battery1')
+                    conn = psycopg2.connect(dbname='d7ur51gud392rj', user='jkmohfinqavvgr', host='ec2-54-83-204-6.compute-1.amazonaws.com', password='487b6c75201e640f89840f6e5e6275d1fe549a7a5df015a5c919bab2fa9dc2f4')
                     print('opened success')
                 except:
                     print(datetime.now(), 'unable to connect')
@@ -173,7 +173,7 @@ class Homeview(RatelimitMixin, View):
             else:
                 top_kill = 0
                 try:
-                    conn = psycopg2.connect(dbname='rift', user='postgres', host='localhost', password='battery1')
+                    conn = psycopg2.connect(dbname='d7ur51gud392rj', user='jkmohfinqavvgr',host='ec2-54-83-204-6.compute-1.amazonaws.com', password='487b6c75201e640f89840f6e5e6275d1fe549a7a5df015a5c919bab2fa9dc2f4')
                     print('opened success')
                 except:
                     print(datetime.now(), 'unable to connect')
