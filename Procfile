@@ -1,3 +1,3 @@
-web: gunicorn gettingstarted.wsgi --log-file -
+web: gunicorn league.wsgi --log-file -
 
 
