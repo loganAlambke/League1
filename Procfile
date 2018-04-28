@@ -1,1 +1,3 @@
-"web: gunicorn league.wsgi" 
+web: gunicorn gettingstarted.wsgi --log-file -
+
+
