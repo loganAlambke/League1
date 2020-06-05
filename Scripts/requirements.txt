@@ -1,6 +1,6 @@
 certifi==2018.1.18
 chardet==3.0.4
-Django==2.0.2
+Django==2.2.13
 django-scheduler==0.8.8
 icalendar==4.0.1
 idna==2.6
